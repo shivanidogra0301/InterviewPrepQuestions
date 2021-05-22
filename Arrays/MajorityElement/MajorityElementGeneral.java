@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class MajorityElementGeneral {
-    public int countOccurence(int[] arr, int n, int k) {
+    public static int countOccurence(int[] arr, int n, int k) {
         HashMap<Integer,Integer> map = new HashMap<>();
         HashSet<Integer> set = new HashSet<>();
         for(int i = 0; i < n; i++){
@@ -21,5 +21,10 @@ public class MajorityElementGeneral {
         return set.size();
         
         
+    }
+    public static void main(String[] args){
+        int[] arr = {2,2,2,6};
+        int ans = countOccurence(arr,4,2);
+        System.out.println(ans);
     }
 }

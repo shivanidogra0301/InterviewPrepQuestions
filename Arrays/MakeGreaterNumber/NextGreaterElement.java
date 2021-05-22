@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.MakeGreaterNumber;
 public class NextGreaterElement {
     public int nextGreaterElement(int n) {
         char[] arr = ("" + n).toCharArray();
