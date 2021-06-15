@@ -1,10 +1,10 @@
-package Recursion_Backtracking.PermutationsAndCombinations;
+package Recursion_Backtracking.PermutationsAndCombinations.WordSelection;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
-public class WordPermu2 {
+public class WordPerm_itemchooses {
     public static void generateWords(int cc, String str, Character[] spots, HashMap<Character, Integer> lastOccurence) {   
         if(cc== str.length()){
           for(int i = 0; i < spots.length; i++){

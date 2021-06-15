@@ -1,7 +1,7 @@
-package Recursion_Backtracking.PermutationsAndCombinations;
+package Recursion_Backtracking.PermutationsAndCombinations.WordSelection;
 import java.io.*;
 import java.util.HashMap;
-public class WordsPermutations {
+public class WordsPermutation_BoxChooses {
     public static void generateWords(int cs, int ts, HashMap<Character, Integer> fmap, String asf) {
         if(cs > ts){
             System.out.println(asf);
