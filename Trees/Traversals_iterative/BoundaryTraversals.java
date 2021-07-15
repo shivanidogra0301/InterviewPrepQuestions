@@ -34,7 +34,9 @@ public class BoundaryTraversals {
 	        return;
 	    }
 	    if(node.left != null){
-	        list.add(node.data);
+			//addition yha isliye kia taki confirm rhe ki ye leaf node to ni h
+	        list.add(node.data); 
+
 	        printleftboundary(node.left,list);
 	    }
 	    else if(node.right != null){
@@ -65,6 +67,8 @@ public class BoundaryTraversals {
 	    if(node.right != null){
 	        
 	        printrightboundary(node.right,list);
+			//postorder m isliye kyuki hme niche se print krna h ya ni last jo right boundary m h vha se
+			
 	        list.add(node.data);
 	    }
 	    else if(node.left != null){

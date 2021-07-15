@@ -22,20 +22,30 @@ public class BinaryCamera {
         }
         return camera;
     }
-    
+    /* 0 - means m leaf node hu, ya dummy leaf node, to m khud camera ni lgauga, parent se manguga
+     1 - means mne khud pe camera lga lia h'
+     2 - means m observed hu
+    */
     public int countcamera(TreeNode root){
-        if(root == null){ //dummy leaf node
-            return 2;
+        if(root == null){ 
+    //null node mtlb uspe na hi camera h, na usko camera chaiye which is like observed node
+                return 2;
         }
         int lnode = countcamera(root.left);
         int rnode = countcamera(root.right);
-        if(lnode == 0 || rnode == 0){ //leaf node present to camera must lgega
+        if(lnode == 0 || rnode == 0){ 
+            //left ya right m se kisi m b leaf node present to camera must lgega
             camera++;
+            //camera lga lia to mera khud ka status 1 hogya
             return 1;
         }
-        if(lnode == 1 || rnode == 1){ //children m kisi ek m camera lga hua h and dusri node m ya to camera h ya observed h to no need for camera returned observed
+        if(lnode == 1 || rnode == 1){ 
+    /*children m kisi ek m camera lga hua h and dusri node confirm 0 nhi h agr hoti
+        to first if m handle ho jati to mrko camera ki zrurt ni h return observed*/
             return 2;
         }
-        return 0; // dono children m 2 h yani dono observed h to ye curnode ab dummy leaf node ki trah kaam kregi
+        return 0; 
+        /* dono children m 2 h yani dono observed h to ye curnode ab dummy leaf node ki trah kaam kregi
+        to optimal min ans k liye hm parent ko khenge camera lgani ki */
     }
 }

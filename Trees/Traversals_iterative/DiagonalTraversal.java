@@ -18,8 +18,8 @@ public class DiagonalTraversal {
         }
     }
     /* diagonals m jana h to phle right m jao or print krdo but hr time jb right jao ussphle uska left agr 
-    exist krta h to usko queue m daldo kyyuki ek case ho skta h jisme uska right exist ni krta but uske right
-    child ka left exist krta h to to vo next diagonal m print hona chaiye isliye sb left child ko queue
+    exist krta h to usko queue m daldo kyyuki ek case ho skta h jisme uska(left node) right exist ni krta but uske(parent node) k  right
+     ka left exist krta h to to vo next diagonal m print hona chaiye isliye sb left child ko queue
     , dalenge*/
     public ArrayList<Integer> diagonal(Node root)
       {
